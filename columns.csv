@@ -1,0 +1,132 @@
+#,Column name,Short description,Format,Long description,Values
+1,fico,Credit Score,Numeric,"CREDIT SCORE - A number, prepared by third parties, summarizing the borrower’s creditworthiness, which may be indicative of the likelihood that the borrower will timely repay future obligations. Generally, the credit score disclosed is the score known at the time of acquisition and is the score used to originate the mortgage.","300 - 850
+9999 = Not Available,
+if Credit Score is < 300 or > 850."
+2,dt_first_pi,First Payment Date,Date,FIRST PAYMENT DATE - The date of the first scheduled mortgage payment due under the terms of the mortgage note.,YYYYMM
+3,flag_fthb,First Time Homebuyer Flag,Alpha,"FIRST TIME HOMEBUYER FLAG - Indicates whether the Borrower, or one of a group of Borrowers, is an individual who (1) is purchasing the mortgaged property, (2) will reside in the mortgaged property as a primary residence and (3) had no ownership interest (sole or joint) in a residential property during the three-year period preceding the date of the purchase of the mortgaged property. With certain limited exceptions, a displaced homemaker or single parent may also be considered a First-Time Homebuyer if the individual had no ownership interest in a residential property during the preceding three-year period other than an ownership interest in the marital residence with a spouse.","Y = Yes
+N = No
+9 = Not Available or
+Not Applicable"
+4,dt_matr,Maturity Date,Date,MATURITY DATE - The month in which the final monthly payment on the mortgage is scheduled to be made as stated on the original mortgage note.,YYYYMM
+5,cd_msa,Metropolitan Statistical Area (MSA) Or Metropolitan Division,Numeric,"METROPOLITAN STATISTICAL AREA (MSA) OR
+METROPOLITAN DIVISION - This disclosure will be based on the designation of the Metropolitan Statistical Area or Metropolitan Division as of the date of issuance. Metropolitan Statistical Areas (MSAs) are defined by the United States Office of Management and Budget (OMB) and have at least one urbanized area with a population of 50,000 or more inhabitants. An MSA containing a single core with a population of 2.5 million or more may be divided into smaller groups of counties that OMB refers to as Metropolitan Divisions. If an MSA applies to a mortgaged property, the applicable five-digit value is disclosed; however, if the mortgaged property also falls within a Metropolitan Division classification, the applicable five-digit value for the Metropolitan Division takes precedence and is disclosed instead. This disclosure will not be updated to reflect any subsequent changes in designations of MSAs, Metropolitan Divisions or other classifications.
+Null indicates that the area in which the mortgaged property is located is (a) neither an MSA nor a Metropolitan Division, or (b) unknown.","Metropolitan Division or MSA Code.
+Space (5) = Indicates that the area in which the mortgaged property is located is
+a) neither an MSA nor a Metropolitan Division, or b) unknown."
+6,mi_pct,Mortgage Insurance Percentage (MI %),Numeric,"MORTGAGE INSURANCE PERCENTAGE (MI %) - The percentage
+of loss coverage on the loan, at the time of Freddie Mac's purchase of the mortgage loan that a mortgage insurer is providing to cover losses incurred as a result of a default on the loan.  Only primary mortgage insurance that is purchased by the Borrower, lender or Freddie Mac is disclosed. Mortgage insurance that constitutes ""credit enhancement"" that is not required by Freddie Mac's Charter is not disclosed.
+Amounts of mortgage insurance reported by Sellers that are less than 1% or greater than 55% will be disclosed as ""Not Available,"" which will be indicated 999.  No MI will be indicated by three zeros.","1% - 55%
+000 = No MI
+999 = Not Available"
+7,cnt_units,Number of Units,Numeric,"NUMBER OF UNITS - Denotes whether the mortgage is a one-, two-, three-, or four-unit property.","1 = one-unit
+2 = two-unit
+3 = three-unit
+4 = four-unit
+99 = Not Available"
+8,occpy_sts,Occupancy Status,Alpha,"OCCUPANCY STATUS - Denotes whether the mortgage type is owner occupied, second home, or investment property.","P = Primary Residence
+I = Investment Property
+S = Second Home
+9 = Not Available"
+9,cltv,Original Combined Loan-to-Value (CLTV),Numeric,"ORIGINAL COMBINED LOAN-TO-VALUE (CLTV) - In the case of a
+purchase mortgage loan, the ratio is obtained by dividing the original mortgage loan amount on the note date plus any secondary mortgage loan amount disclosed by the Seller by the lesser of the mortgaged property's appraised value on the note date or its purchase price.  In the case of a refinance mortgage loan, the ratio is obtained by dividing the original mortgage loan amount on the note date plus any secondary mortgage loan amount disclosed by the Seller by the mortgaged property's appraised value on the note date.  If the secondary financing amount disclosed by the Seller includes a home equity line of credit, then the CLTV calculation reflects the disbursed amount at closing of the first lien mortgage loan, not the maximum loan amount available under the home equity line of credit.  In the case of a seasoned mortgage loan, if the Seller cannot warrant that the value of the mortgaged property has not declined since the note date, Freddie Mac requires that the Seller must provide a new appraisal value, which is used in the CLTV calculation.  In certain cases, where the Seller delivered a loan to Freddie Mac with a special code indicating additional secondary mortgage loan amounts, those amounts may have been included in the CLTV calculation.
+If the CLTV is   LTV, set the CLTV to 'Not Available.'
+This disclosure is subject to the widely varying standards originators use to verify Borrowers' secondary mortgage loan amounts and will not be updated.","201801 and prior:
+   6% - 200%
+   999 = Not Available
+201802 and later:
+   1% - 998%
+   999 = Not Available    
+HARP ranges:
+   1% - 998%
+   999 = Not Available"
+10,dti,Original Debt-to-Income (DTI) Ratio,Numeric,"ORIGINAL DEBT-TO-INCOME (DTI) RATIO - Disclosure of the debt to income ratio is based on (1) the sum of the borrower's monthly debt payments, including monthly housing expenses that incorporate the mortgage payment the borrower is making at the time of the delivery of the mortgage loan to Freddie Mac, divided by (2) the total monthly income used to underwrite the loan as of the date of the origination of the such loan.
+Ratios greater than 65% are indicated that data is Not Available.  All loans in the HARP dataset will be disclosed as Not Available.
+This disclosure is subject to the widely varying standards originators use to verify Borrowers' assets and liabilities and will not be updated.","0% DTI =65%
+999 = Not Available
+HARP ranges:
+ 999 = Not Available"
+11,orig_upb,Original UPB,Numeric,ORIGINAL UPB - The UPB of the mortgage on the note date.,"Amount will be rounded to the nearest $1,000."
+12,ltv,Original Loan-to-Value (LTV),Numeric,"ORIGINAL LOAN-TO-VALUE (LTV) - In the case of a purchase mortgage loan, the ratio obtained by dividing the original mortgage loan amount on the note date by the lesser of the mortgaged property's appraised value on the note date or its purchase price.
+In the case of a refinance mortgage loan, the ratio obtained by dividing the original mortgage loan amount on the note date and the mortgaged property's appraised value on the note date.
+In the case of a seasoned mortgage loan, if the Seller cannot warrant that the value of the mortgaged property has not declined since the note date, Freddie Mac requires that the Seller must provide a new appraisal value, which is used in the LTV calculation.
+For loans in the non HARP dataset, ratios below 6% or greater than 105% will be disclosed as ""Not Available,"" indicated by 999.  For loans in the HARP dataset, LTV ratios greater than 999% will be disclosed as Not Available.","201801 and prior:
+ 6% - 105%
+  999 = Not Available
+201802 and later:
+ 1% - 998%
+ 999 = Not Available
+HARP ranges:
+ 1% - 998%
+ 999 = Not Available"
+13,int_rt,Original Interest Rate,"Numeric - 6,3",ORIGINAL INTEREST RATE - The original note rate as indicated on the mortgage note.,
+14,channel,Channel,Alpha,"CHANNEL - Disclosure indicates whether a Broker or Correspondent, as those terms are defined below, originated or was involved in the origination of the mortgage loan.  If a Third Party Origination is applicable, but the Seller does not specify Broker or Correspondent, the disclosure will indicate ""TPO Not Specified"". Similarly, if neither Third Party Origination nor Retail designations are available, the disclosure will indicate ""TPO Not Specified."" If a Broker, Correspondent or Third Party Origination disclosure is not applicable, the mortgage loan will be designated as Retail, as defined below. Broker is a person or entity that specializes in loan originations, receiving a commission (from a Correspondent or other lender) to match Borrowers and lenders. The Broker performs some or most of the loan processing functions, such as taking loan applications, or ordering credit reports, appraisals and title reports. Typically, the Broker does not underwrite or service the mortgage loan and generally does not use its own funds for closing; however, if the Broker funded a mortgage loan on a lender's behalf, such a mortgage loan is considered a ""Broker"" third party origination mortgage loan.
+The mortgage loan is generally closed in the name of the lender who commissioned the Broker's services.
+Correspondent is an entity that typically sells the Mortgages it originates to other lenders, which are not Affiliates of that entity, under a specific commitment or as part of an ongoing relationship. The Correspondent performs some, or all, of the loan processing functions, such as: taking the loan application; ordering credit reports, appraisals, and title reports; and verifying the Borrower's income and  employment. The Correspondent may or may not have delegated underwriting and typically funds the mortgage loans at settlement. The mortgage loan is closed in the Correspondent's name and the Correspondent may or may not service the mortgage loan. The Correspondent may use a Broker to perform some of the processing functions or even to fund the loan on its behalf; under such circumstances, the mortgage loan is considered a ""Broker"" third party origination mortgage loan, rather than a ""Correspondent"" third party origination mortgage loan.
+Retail Mortgage is a mortgage loan that is originated, underwritten and funded by a lender or its Affiliates. The mortgage loan is closed in the name of the lender or its Affiliate and if it is sold to Freddie Mac, it is sold by the lender or its Affiliate that originated it. A mortgage loan that a Broker or Correspondent completely or partially originated, processed, underwrote, packaged, funded or closed is not considered a Retail mortgage loan.
+For purposes of the definitions of Correspondent and Retail, ""Affiliate"" means any entity that is related to another party as a consequence of the entity, directly or indirectly, controlling the other party, being controlled by the other party, or being under common control with the other party.","R = Retail
+B = Broker
+C = Correspondent
+T = TPO Not Specified
+9 = Not Available"
+15,ppmt_pnlty,Prepayment Penalty Mortgage (PPM) Flag,Alpha,"PREPAYMENT PENALTY MORTGAGE (PPM) FLAG - Denotes
+whether the mortgage is a PPM. A PPM is a mortgage with respect to which the borrower is, or at any time has been, obligated to pay a penalty in the event of certain repayments of principal.","Y = PPM
+N = Not PPM"
+16,prod_type,Amortization Type (Formerly Product Type),Alpha,AMORTI ATION TYPE - Denotes that the product is a fixed-rate mortgage or adjustable-rate mortgage.,"FRM - Fixed Rate Mortgage
+ARM - Adjustable Rate Mortgage"
+17,st,Property State,Alpha,PROPERTY STATE - A two-letter abbreviation indicating the state or territory within which the property securing the mortgage is located.,"AL, T , VA, etc."
+18,prop_type,Property Type,Alpha,"PROPERTY TYPE - Denotes whether the property type secured by the mortgage is a condominium, leasehold, planned unit development (PUD), cooperative share, manufactured home, or Single-Family home.
+If the Property Type is Not Available, this will be indicated by 99.","CO = Condo
+PU = PUD
+MH = Manufactured Housing
+SF = Single-Family
+CP = Co-op
+99 = Not Available"
+19,zipcode,Postal Code,Numeric,POSTAL CODE - The postal code for the location of the mortgaged property,"00, where ""   "" represents the first three digits of the 5- digit postal code
+Space (5) = Unknown"
+20,id_loan,Loan Sequence Number,Numeric,LOAN SEQUENCE NUMBER - Unique identifier assigned to each loan.,
+21,loan_purpose,Loan Purpose,Alpha,"LOAN PURPOSE - Indicates whether the mortgage loan is a Cash- out Refinance mortgage, No Cash-out Refinance mortgage, or a Purchase mortgage.
+Generally, a Cash-out Refinance mortgage loan is a mortgage loan in which the use of the loan amount is not limited to specific purposes. A mortgage loan placed on a property previously owned free and clear by the Borrower is always considered a Cash-out Refinance mortgage loan.  Generally, a No Cash-out Refinance mortgage loan is a mortgage loan in which the loan amount is limited to the following uses:
+Pay off the first mortgage, regardless of its age
+Pay off any junior liens secured by the mortgaged property, that were used in their entirety to acquire the subject property
+Pay related closing costs, financing costs and prepaid items, and Disburse cash out to the Borrower (or any other payee) not to exceed 2% of the new refinance mortgage loan or $2,000, whichever is less.
+As an exception to the above, for construction conversion mortgage loans and renovation mortgage loans, the amount of the interim construction financing secured by the mortgaged property is considered an amount used to pay off the first mortgage. Paying off unsecured liens or construction costs paid by the Borrower outside of the secured interim construction financing is considered cash out to the Borrower, if greater than $2000 or 2% of loan amount.
+This disclosure is subject to various special exceptions used by Sellers to determine whether a mortgage loan is a No Cash-out Refinance mortgage loan.","P = Purchase
+C = Refinance - Cash Out
+N = Refinance - No Cash Out
+R = Refinance - Not Specified
+9 =Not Available"
+22,orig_loan_term,Original Loan Term,Numeric,ORIGINAL LOAN TERM - A calculation of the number of scheduled monthly payments of the mortgage based on the First Payment Date and Maturity Date.,"Calculation: (Loan Maturity Date (MM/YY)
+- Loan First Payment Date (MM/YY) + 1)"
+23,cnt_borr,Number of Borrowers,Numeric,"NUMBER OF BORROWERS - The number of Borrower(s) who are obligated to repay the mortgage note secured by the mortgaged property. Disclosure denotes only whether there is one borrower, or more than one borrower associated with the mortgage note. This disclosure will not be updated to reflect any subsequent assumption of the mortgage note.","201801 and prior:
+ 01 = 1 borrower
+ 02 = > 1 borrowers
+ 99 = Not Available 201802 and later:
+ 01 = 1 borrower
+ 02 = 2 borrowers
+ 03 = 3 borrowers
+ 
+ 09 = 9 borrowers
+  10 = 10 borrowers
+  99 = Not Available"
+24,seller_name,Seller Name,Alpha Numeric,"SELLER NAME - The entity acting in its capacity as a seller of mortgages to Freddie Mac at the time of acquisition.
+Seller Name will be disclosed for sellers with a total Original UPB representing 1% or more of the total Original UPB of all loans in the Dataset for a given calendar quarter.  Otherwise, the Seller Name will be set to ""Other Sellers"".","Name of the seller, or ""Other Sellers"""
+25,servicer_name,Servicer Name,Alpha Numeric,"SERVICER NAME - The entity acting in its capacity as the servicer of mortgages to Freddie Mac as of the last period for which loan activity is reported in the Dataset.
+Servicer Name will be disclosed for servicers with a total Original UPB representing 1% or more of the total Original UPB of all loans in the Dataset for a given calendar quarter.  Otherwise, the Servicer Name will be set to ""Other Servicers"".","Name of the servicer, or ""Other Servicers"""
+26,flag_sc,Super Conforming Flag,Alpha,SUPER CONFORMING FLAG - For mortgages that exceed conforming loan limits with origination dates on or after 10/1/2008 and were delivered to Freddie Mac on or after 1/1/2009,"Y = Yes
+Space (1) = Not Super Conforming"
+27,pre_relief,Pre-HARP Loan Sequence Number,Alpha Numeric - PYYQnXXXXXXX,"PRE-RELIEF REFINANCE LOAN SEQUENCE NUMBER - The
+Loan Sequence Number link that associates a Relief Refinance loan to the Loan Sequence Number assigned to the loan from which it was refinanced within in the Single-Family Loan Level Dataset.
+Note: Populated only for loans where the Relief Refinance Indicator is set to Y. All other loans will be blank.","PYY0n       
+ Product F = FRM and A = ARM;
+ YY0n = origination year and quarter; and, randomly assigned digits"
+28,pgrm_ind,Program Indicator,Alpha Numeric,"PROGRAM INDICATOR - The indicator that identifies if a loan participates in and of the Freddie Mac programs listed in the valid values.
+Note: The standard dataset discloses these enumerations for loans originated on or after March 1, 2015. The Non-Standard dataset discloses enumerations for loans originated under the HP program between 1999 and February 28, 2015. Underwriting standards for Home Possible prior to March 1, 2015 may be different than the current standards.","H = Home Possible F = HFA Advantage
+9 = Not Available or not part of Home Possible or HFA Advantage programs"
+29,rel_ref_ind,HARP Indicator,Alpha,RELIEF REFINANCE INDICATOR - Indicator that identifies whether the loan is part of Freddie Mac's Relief Refinance Program. Loans which are both a Relief Refinance and have an Original Loan-to-Value above 80 are HARP loans.,Y = Relief Refinance Loan Space = Non-Relief Refinance loan
+30,prop_val_meth,Property Valuation Method,Numeric,"PROPERTY VALUATION METHOD - The indicator denoting which method was used to obtain a property appraisal, if any.
+Note: Populated for loans originated on or after 1/1/2017.","1 = ACE Loans  2 = Full Appraisal
+3 = Other Appraisals (Desktop, driveby, external, AVM)
+9 = Not Available"
+31,int_only_ind,Interest Only (I/O) Indicator,Alpha,"INTEREST ONLY INDICATOR (I/O INDICATOR) - The indicator
+denoting whether the loan only requires interest payments for a specified period beginning with the first payment date.",Y = Yes N = No
+32,TARGET,Default label,Numeric,Target label,"1 = Default, 0 otherwise"
